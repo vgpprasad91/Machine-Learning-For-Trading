@@ -12,6 +12,9 @@ def plot_adj_close(symbol):
   
   ## write a command to plot the adjusted close column
   df['Adj Close'].plot()
+  plt.xlabel('index')
+  plt.ylabel('Adj Close')
+  plt.title('Adj Close for {}'.format(symbol))
   plt.show()
 
 # write a function to get all the symbols
