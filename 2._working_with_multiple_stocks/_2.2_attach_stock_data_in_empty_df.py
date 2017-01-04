@@ -17,11 +17,13 @@ def test_run():
   dfSPY = pd.read_csv("data/SPY.csv",index_col="Date",parse_dates=True, usecols=['Date','Adj Close'],na_values=['nan'])
   
   # Join the two dataframes using DataFrame.join()
-  df = df.join(dfSPY) # dataframe.join() does a left join by default
+  df = df.join(dfSPY,how="inner") # dataframe.join() does a left join by default
+  
+  # Join and drop na using the inner attribute of the how property
   
   # Drop the rows where it is na
-  df = df.dropna()
-  print df
+  #df = df.dropna()
+  #print df
 
 # write a command to read in the main funcion
 int __name__ == "main":
