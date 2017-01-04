@@ -19,7 +19,7 @@ def test_run():
   # Join the two dataframes using DataFrame.join()
   df = df.join(dfSPY,how="inner") # dataframe.join() does a left join by default
   
-  # Join and drop na using the inner attribute of the how property
+  # Join and drop na using the inner attribute of the how property 
   
   # Drop the rows where it is na
   #df = df.dropna()
